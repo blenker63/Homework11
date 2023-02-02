@@ -20,11 +20,34 @@ public class Main {
             System.out.println(year + "  год не является високосным");
         }
     }
+        public static void recommendInstallation( int clientOS,int clientDeviseYear) {
+//        int clientOS = 0; //инициализация признака операционной системы телефона, 0 - iOS,  1 - Android
+//        int clientDeviseYear = 2013; //инициализация года выпуска телефона телефона
+        if (clientDeviseYear >= 2015) { // выбор версии приложения, для телефонов ранее 2013 - облегченная, 2013 и позже - обычная
+            if (clientOS == 0) {
+                System.out.println("Установите версию приложения для iOS");
+            } else {
+                System.out.println("Установите версию для Android");
+            }
+        } else if (clientDeviseYear < 2015) {
+            if (clientOS == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("установите облегченную версию приложения для Android  по ссылке");
+            }
+        }
+    }
 
-    public static void main(String[] args) {
-{ System.out.println("Задача 1");}
+        public static void main (String[] args) {
+        System.out.println("Задача 1");
         int year = 2021;
         definitionLeapYear(year);
+        System.out.println("Задача 2");
+        int clientOS = 0; //инициализация признака операционной системы телефона, 0 - iOS,  1 - Android
+        int clientDeviseYear = 2013; //инициализация года выпуска телефона телефона
+        recommendInstallation( clientOS, clientDeviseYear);
     }
-}
+    }
+
+
 
