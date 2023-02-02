@@ -4,8 +4,7 @@ public class Main {
 
     public static void definitionLeapYear(int year) {
         int signOfLeapYear1 = 4; //инициализация признака високосный год - каждые 4 года
-        int signOfLeapYear2 = 400; //инициализация пр
-        // изнака високосный год - каждые 400 лет
+        int signOfLeapYear2 = 400; //инициализация признака високосный год - каждые 400 лет
         int signOfLeapYearNon = 100; //инициализация признака не високосный год - каждые 100 лет
         float multiplicityYear4 = (float) year / signOfLeapYear1; // определение кратности года 4
         float multiplicityYear400 = (float) year / signOfLeapYear2; //определение кратности года 400
@@ -21,8 +20,6 @@ public class Main {
         }
     }
         public static void recommendInstallation( int clientOS,int clientDeviseYear) {
-//        int clientOS = 0; //инициализация признака операционной системы телефона, 0 - iOS,  1 - Android
-//        int clientDeviseYear = 2013; //инициализация года выпуска телефона телефона
         if (clientDeviseYear >= 2015) { // выбор версии приложения, для телефонов ранее 2013 - облегченная, 2013 и позже - обычная
             if (clientOS == 0) {
                 System.out.println("Установите версию приложения для iOS");
@@ -38,7 +35,6 @@ public class Main {
         }
     }
     public static void deliveringDay (int deliveryDistance) {
-//        int deliveryDistance = 95; // инициализация расстояния от офиса до адреса доставки
         int deliveryOneDay = 20; //инициализация расстояния для доставки за 1 день до 20 км
         int deliveryTwoDay = 60; //инициализация расстояния для доставки за 2 дня от 20 до 60 км
         int deliveryThreeDay = 100; //инициализация расстояния для доставки за 3 дня от 60 до 100 км
@@ -54,14 +50,14 @@ public class Main {
     }
         public static void main (String[] args) {
         System.out.println("Задача 1");
-        int year = 2021;
+        int year = 2021; //инициализация проверяемого года
         definitionLeapYear(year);
         System.out.println("Задача 2");
         int clientOS = 0; //инициализация признака операционной системы телефона, 0 - iOS,  1 - Android
         int clientDeviseYear = 2016; //инициализация года выпуска телефона телефона
         recommendInstallation( clientOS, clientDeviseYear);
         System.out.println("Задача 3");
-        int deliveryDistance = 95;
+        int deliveryDistance = 95; //инициализация расстояния от офиса до адреса клиента
         deliveringDay(deliveryDistance);
     }
     }
