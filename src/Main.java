@@ -37,15 +37,32 @@ public class Main {
             }
         }
     }
-
+    public static void deliveringDay (int deliveryDistance) {
+//        int deliveryDistance = 95; // инициализация расстояния от офиса до адреса доставки
+        int deliveryOneDay = 20; //инициализация расстояния для доставки за 1 день до 20 км
+        int deliveryTwoDay = 60; //инициализация расстояния для доставки за 2 дня от 20 до 60 км
+        int deliveryThreeDay = 100; //инициализация расстояния для доставки за 3 дня от 60 до 100 км
+        if (deliveryDistance <= deliveryOneDay) {
+            System.out.println("Потребуется дней: " + 1);
+        } else if (deliveryDistance <= deliveryTwoDay) {
+            System.out.println("Потребуется дней: " + 2);
+        } else if (deliveryDistance <= deliveryThreeDay) {
+            System.out.println("Потребуется дней: " + 3);
+        } else {
+            System.out.println("Доставки нет");
+        }
+    }
         public static void main (String[] args) {
         System.out.println("Задача 1");
         int year = 2021;
         definitionLeapYear(year);
         System.out.println("Задача 2");
         int clientOS = 0; //инициализация признака операционной системы телефона, 0 - iOS,  1 - Android
-        int clientDeviseYear = 2013; //инициализация года выпуска телефона телефона
+        int clientDeviseYear = 2016; //инициализация года выпуска телефона телефона
         recommendInstallation( clientOS, clientDeviseYear);
+        System.out.println("Задача 3");
+        int deliveryDistance = 95;
+        deliveringDay(deliveryDistance);
     }
     }
 
