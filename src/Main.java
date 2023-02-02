@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.concurrent.LinkedTransferQueue;
 
 public class Main {
@@ -21,13 +22,14 @@ public class Main {
     }
         public static void recommendInstallation( int clientOS,int clientDeviseYear) { // метод определение рекомендации клиенту
         // в зависимости от ОС и года выпуска телефона
-        if (clientDeviseYear >= 2015) { // выбор версии приложения, для телефонов ранее 2013 - облегченная, 2013 и позже - обычная
+            int currentYear = LocalDate.now().getYear();
+            if (clientDeviseYear == currentYear) { // выбор версии приложения, для телефонов ранее текущего года - облегченная, текущий год - обычная
             if (clientOS == 0) {
                 System.out.println("Установите версию приложения для iOS");
             } else {
                 System.out.println("Установите версию для Android");
             }
-        } else if (clientDeviseYear < 2015) {
+        } else if (clientDeviseYear < currentYear) {
             if (clientOS == 0) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
