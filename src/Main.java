@@ -1,16 +1,11 @@
-public class Main {
-    public static void main(String[] args) {
-        task1();
-//        task2();
-//        task3();
-    }
+import java.util.concurrent.LinkedTransferQueue;
 
-    public static void task1() {
-        System.out.println("Задача 1");
-       public static float definitionLeapYear (int year) {
-//        int year = 2024; //инициализация значения года для проверки
+public class Main {
+
+    public static void definitionLeapYear(int year) {
         int signOfLeapYear1 = 4; //инициализация признака високосный год - каждые 4 года
-        int signOfLeapYear2 = 400; //инициализация признака високосный год - каждые 400 лет
+        int signOfLeapYear2 = 400; //инициализация пр
+        // изнака високосный год - каждые 400 лет
         int signOfLeapYearNon = 100; //инициализация признака не високосный год - каждые 100 лет
         float multiplicityYear4 = (float) year / signOfLeapYear1; // определение кратности года 4
         float multiplicityYear400 = (float) year / signOfLeapYear2; //определение кратности года 400
@@ -25,6 +20,11 @@ public class Main {
             System.out.println(year + "  год не является високосным");
         }
     }
-    int Year = 2021
+
+    public static void main(String[] args) {
+{ System.out.println("Задача 1");}
+        int year = 2021;
+        definitionLeapYear(year);
     }
 }
+
