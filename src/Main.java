@@ -2,7 +2,7 @@ import java.util.concurrent.LinkedTransferQueue;
 
 public class Main {
 
-    public static void definitionLeapYear(int year) {
+    public static void definitionLeapYear(int year) { // метод определения признака високосного года
         int signOfLeapYear1 = 4; //инициализация признака високосный год - каждые 4 года
         int signOfLeapYear2 = 400; //инициализация признака високосный год - каждые 400 лет
         int signOfLeapYearNon = 100; //инициализация признака не високосный год - каждые 100 лет
@@ -19,7 +19,8 @@ public class Main {
             System.out.println(year + "  год не является високосным");
         }
     }
-        public static void recommendInstallation( int clientOS,int clientDeviseYear) {
+        public static void recommendInstallation( int clientOS,int clientDeviseYear) { // метод определение рекомендации клиенту
+        // в зависимости от ОС и года выпуска телефона
         if (clientDeviseYear >= 2015) { // выбор версии приложения, для телефонов ранее 2013 - облегченная, 2013 и позже - обычная
             if (clientOS == 0) {
                 System.out.println("Установите версию приложения для iOS");
@@ -34,7 +35,8 @@ public class Main {
             }
         }
     }
-    public static void deliveringDay (int deliveryDistance) {
+    public static void deliveringDay (int deliveryDistance) { // метод рассчета времени доставки карты до клиента
+        // в зависимости от расстояния от офиса до адреса клиента
         int deliveryOneDay = 20; //инициализация расстояния для доставки за 1 день до 20 км
         int deliveryTwoDay = 60; //инициализация расстояния для доставки за 2 дня от 20 до 60 км
         int deliveryThreeDay = 100; //инициализация расстояния для доставки за 3 дня от 60 до 100 км
